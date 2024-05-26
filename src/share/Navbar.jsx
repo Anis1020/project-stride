@@ -11,13 +11,13 @@ const Navbar = () => {
       </li>
 
       <li>
-        <NavLink to={"/dashboard"}>Dashboard</NavLink>
+        <NavLink to={"/dashboard/home"}>Dashboard</NavLink>
       </li>
     </>
   );
   return (
-    <div>
-      <div className="navbar bg-base-100">
+    <>
+      <div className="navbar bg-base-100 shadow-xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,11 +50,14 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <Link to={"/login"} className="btn">
+            Log Out
+          </Link>{" "}
+          <Link to={"/login"} className="btn">
             Login
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

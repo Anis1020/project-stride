@@ -6,6 +6,9 @@ import Registration from "../pages/Registration";
 import ErrorPage from "../pages/ErrorPage";
 import Dashboard from "../dashboard/Dashboard";
 import Services from "../pages/Services";
+import AddItem from "../dashboard/AddItem";
+import EditItem from "../dashboard/EditItem";
+import DashboardHome from "../dashboard/DashboardHome";
 
 export const router = createBrowserRouter([
   {
@@ -34,5 +37,19 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "/dashboard/home",
+        element: <DashboardHome></DashboardHome>,
+      },
+      {
+        path: "/dashboard/addItem",
+        element: <AddItem></AddItem>,
+      },
+      {
+        path: "/dashboard/edit/:id",
+        element: <EditItem></EditItem>,
+      },
+    ],
   },
 ]);

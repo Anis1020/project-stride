@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "11",
+      "name": "project stride",
+      "services": "web developer",
+      "description": "this is my passion i like to do it",
+      "photo": "my photo url"
+    },
+    {
+      "id": "3",
+      "name": "ami",
+      "services": "web developer ",
+      "description": "this is my passion i like to do it so hire me",
+      "photo": "my photo url"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
