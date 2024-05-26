@@ -48,8 +48,10 @@ export const router = createBrowserRouter([
         element: <AddItem></AddItem>,
       },
       {
-        path: "/dashboard/edit/:id",
+        path: "/dashboard/editItem/:id",
         element: <EditItem></EditItem>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/posts/${params.id}`),
       },
     ],
   },
