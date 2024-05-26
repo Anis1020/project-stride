@@ -2,39 +2,29 @@
   "posts": [
     {
       "id": "1",
-      "title": "a title",
-      "views": 100
+      "name": "ami",
+      "services": "graphics designer ",
+      "description": "i am a good desiger i have been work so lonk time",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsoR3Us3A4iJJ2sovMLg11TLx7qNJ9bFnoQOsc6Qfpag&s"
     },
     {
       "id": "2",
-      "title": "another title",
-      "views": 200
-    },
-    {
-      "id": "11",
       "name": "project stride",
       "services": "web developer",
-      "description": "this is my passion i like to do it",
-      "photo": "my photo url"
-    },
-    {
-      "id": "3",
-      "name": "ami",
-      "services": "web developer ",
       "description": "this is my passion i like to do it so hire me",
-      "photo": "my photo url"
+      "photo": "https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_640.jpg"
     }
   ],
   "comments": [
     {
       "id": "1",
       "text": "a comment about post 1",
-      "postId": "1"
+      "postId": null
     },
     {
       "id": "2",
       "text": "another comment about post 1",
-      "postId": "1"
+      "postId": null
     }
   ],
   "profile": {

@@ -1,47 +1,32 @@
-import { Link } from "react-router-dom";
+const SingleItem = ({ singleData, onDelete }) => {
+  const { name, id, photo, services, description } = singleData;
 
-const SingleItem = () => {
+  const handleDelete = () => {
+    onDelete(id);
+  };
   return (
-    <div className="lg:w-[70%] mx-auto">
-      <form className="card-body">
-        <div className="form-control">
-          <input
-            type="email"
-            placeholder="email"
-            className="input input-bordered"
-            required
-            name="email"
-          />
+    <>
+      <div className="card w-96 bg-base-100 shadow-xl">
+        <figure>
+          <img src={photo} className="w-96 h-56 " alt="Shoes" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">{name}</h2>
+          <p>{services}</p>
+          <p>{description}</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Details</button>
+            <button className="btn btn-secondary">Edit</button>
+            <button
+              onClick={() => handleDelete(id)}
+              className="btn btn-warning"
+            >
+              Delete
+            </button>
+          </div>
         </div>
-        <div className="form-control">
-          <input
-            type="password"
-            placeholder="password"
-            className="input input-bordered"
-            required
-            name="password"
-          />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">
-              Forgot password?
-            </a>
-          </label>
-        </div>
-        <div className="form-control mt-6 ">
-          <button className="btn btn-primary">Login</button>
-        </div>
-      </form>
-      <div className=" card-body -mt-10">
-        <button className="btn w-full btn-accent">Google Login</button>
       </div>
-
-      <div className="text-center">
-        <Link to={"/register"}>
-          New to this site{" "}
-          <button className="btn btn-link">Registration</button>
-        </Link>
-      </div>
-    </div>
+    </>
   );
 };
 
