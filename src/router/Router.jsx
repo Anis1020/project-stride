@@ -9,6 +9,7 @@ import Services from "../pages/Services";
 import AddItem from "../dashboard/AddItem";
 import EditItem from "../dashboard/EditItem";
 import DashboardHome from "../dashboard/DashboardHome";
+import PrivetRoute from "./PrivetRoute";
 
 export const router = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivetRoute>
+        <Dashboard></Dashboard>
+      </PrivetRoute>
+    ),
     children: [
       {
         path: "/dashboard/home",
@@ -45,7 +50,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/dashboard/addItem",
-        element: <AddItem></AddItem>,
+        element: (
+          <PrivetRoute>
+            <AddItem></AddItem>
+          </PrivetRoute>
+        ),
       },
       {
         path: "/dashboard/editItem/:id",

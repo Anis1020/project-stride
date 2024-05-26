@@ -1,5 +1,6 @@
 import {
   GoogleAuthProvider,
+  createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -16,7 +17,7 @@ const AuthProvider = ({ children }) => {
 
   const createUserByEmail = (email, password) => {
     setLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
+    return createUserWithEmailAndPassword(auth, email, password);
   };
   const loginByEmail = (email, password) => {
     setLoading(true);

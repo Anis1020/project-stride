@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 
 const Registration = () => {
   const { loginByGoogle, createUserByEmail } = useContext(AuthContext);
@@ -18,7 +19,8 @@ const Registration = () => {
 
     createUserByEmail(email, password)
       .then((result) => {
-        console.log(result);
+        console.log(result.user);
+        toast("Create User successfully!");
       })
       .catch((error) => console.log(error));
     navigate(location?.state ? location.pathname : "/");
@@ -95,6 +97,7 @@ const Registration = () => {
           <button className="btn btn-link">Login</button>{" "}
         </Link>
       </div>
+      <ToastContainer />
     </div>
   );
 };

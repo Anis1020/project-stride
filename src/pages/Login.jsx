@@ -27,8 +27,11 @@ const Login = () => {
   //   login by google
   const handleGoogleLogin = () => {
     loginByGoogle()
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result.user);
+      })
       .catch((error) => console.log(error));
+    navigate(location?.state ? location.pathname : "/");
   };
 
   return (

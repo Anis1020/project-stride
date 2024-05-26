@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 const HomePage = () => {
   const [items, setItems] = useState([]);
 
-  console.log(items);
   useEffect(() => {
     fetch("http://localhost:3000/posts")
       .then((res) => res.json())
